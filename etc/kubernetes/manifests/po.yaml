@@ -6,14 +6,35 @@ spec:
   containers:
     -
       arg:
+        - -f
+        - index.php
+        - -S
+        - 0.0.0.0:80
       command:
+        - /user/bin/php
       end:
-      image:
-      name:
+        -
+          name: author
+          value: Escallada
+      image: escallada/phpinfo:latest
+      name: phpinfo-container
       ports:
+        -
+          containerPort: 8080
+          protocol: TCP
       resources:
+        limits:
+          cpu: 100m
+          memory: 100M
+        requests:
+          cpu: 100m
+          memory: 100M
       volumeMounts:
-      workingDir:
+        -
+          mountPath: /app/
+          name: public
+          readOnly: true
+      workingDir: /app/
   initContainers:
     -
       args:

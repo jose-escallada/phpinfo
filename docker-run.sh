@@ -10,7 +10,13 @@ docker image build \
   --tag local/phpinfo:test \
   ./  
   
-# docker container run --entrypoint /bin/sh --interactive --tty local/phpinfo  
+## docker login
+## docker docker image tag local/phpinfo:test ganimedescolomar/phpinfo:latest
+## docker image push ganimedescolomar/phpinfo:latest
+  
+## docker container run --entrypoint /bin/sh --interactive --rm --tty local/phpinfo:test
+## find / | grep bin/ | wc -l
+## which php
 
 docker network create phpinfo
 docker container run \

@@ -5,13 +5,13 @@ metadata:
 spec:
   containers:
     -
-      arg:
+      args:
         - -f
         - index.php
         - -S
         - 0.0.0.0:8080
       command:
-        - /user/bin/php
+        - /usr/bin/php
       end:
         -
           name: author
@@ -67,7 +67,7 @@ spec:
           mountPath: /public/
           name: public
           readOnly: false
-      workingDir:
+      workingDir: /private/
   volumes:
     -  
       emptyDir:

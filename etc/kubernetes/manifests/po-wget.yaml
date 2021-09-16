@@ -46,7 +46,7 @@ spec:
         -
           name: author
           value: Escallada
-      image: library/busybox:1.33.1-uclibc@sha256:829b46ecdbdda76abbfe33b8a66332a02aa1593acc434541b4069ce5927bb811
+      image: library/busybox:1.33.1-uclibc@sha256:febcf61cd6e1ac9628f6ac14fa40836d16f3c6ddef3b303ff0321606e55ddd0b
       name: phpinfo-wget
       resources:
         limits:

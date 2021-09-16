@@ -12,7 +12,7 @@ spec:
         - 0.0.0.0:8080
       command:
         - /usr/bin/php
-      end:
+      env:
         -
           name: author
           value: Escallada
@@ -47,7 +47,7 @@ spec:
           name: author
           value: Escallada
       image: library/busybox:1.33.1-uclibc@sha256:829b46ecdbdda76abbfe33b8a66332a02aa1593acc434541b4069ce5927bb811
-      name: phpinfo-git
+      name: phpinfo-wget
       resources:
         limits:
           cpu: 100m
